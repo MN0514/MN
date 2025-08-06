@@ -54,7 +54,7 @@ public class Qes1 {
 		
 		int score = 80;//score という int型の変数 を宣言し、80 を代入
 		score = score+20;//score に 20 を加えて、更新する
-		System.out.println("最終スコア:"+score);//最終スコア: 100 　をscoreを使用してコンソールに表示してください。
+		System.out.println("最終スコア:"+score);//最終スコア: 100 をscoreを使用してコンソールに表示してください。
 		
 		//ここまでQes7  7.7 変数②
 		
