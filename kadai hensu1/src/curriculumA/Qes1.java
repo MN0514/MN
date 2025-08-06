@@ -49,7 +49,7 @@ public class Qes1 {
 		int num1 = 10;//num1 という int型の変数 を宣言し、10 を代入
 		int num2 = 5;//num2 という int型の変数 を宣言し、5 を代入
 		int sum =num1+num2;//num1 と num2 を足した結果をsumという変数に代入
-		System.out.println(sum);//蒸気をコンソールに表示
+		System.out.println(sum);//上記をコンソールに表示
 		//ここまでQes6  7.7 変数②
 		
 		int score = 80;//score という int型の変数 を宣言し、80 を代入
