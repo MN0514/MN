@@ -75,6 +75,31 @@ public class Qes1 {
 		
 		//ここまでQes10  7.9 型変換
 		
+		int a = 10 ; //int 型の変数aに10を代入
+		int b = 20 ; //int 型の変数bに20を代入
+		boolean result = false ; //boolean 変数resultを宣言
+		result = a<b; //a が b より小さいかどうかを boolean 変数 result に代入
+		System.out.println(result); //result の値を表示
+		
+		//ここまでQes11 7.10	真偽値と条件式
+		
+		int x = 15;//int 型の変数 x に 15 を代入
+		if(x > 10) {
+			System.out.println("OK"); //x が 10 以上なら "OK"を表示
+		}
+		else {
+			System.out.println("NG");//そうでなければ "NG" を表示
+			
+		}
+		
+		//ここまでQes12 7.10	真偽値と条件式
+		
+		String text = "私はJavaが好きです。Javaは楽しい！";
+			
+		System.out.println(text.replace("Java","Python"));//String型の変数textを文章の中にある「Java」を「Python」に置き換えて表示
+		
+		//ここまでQes13 7.10	真偽値と条件式
+		
 	}
 
 }
