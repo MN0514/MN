@@ -91,7 +91,7 @@ public class Qes2 {
 			if(input == null || input.isEmpty()) {
 				System.out.println("入力は無効です");
 			}//入力が null または空文字（""）のときに「入力が無効です」と表示する
-			
+			//課題7.11 if型反復処理 Qes8
 	}
 	
 		
