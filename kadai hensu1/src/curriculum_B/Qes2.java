@@ -94,51 +94,60 @@ public class Qes2 {
 			//課題7.11 if型反復処理 Qes8
 			
 			int day = 1 ; //int 型の変数 day を用意
-			switch(day) {
+			switch(day) {//day の値に応じて曜日を表示
+
 			case 1:
 				System.out.println("月曜日");
-				break;
+				break;//1 → "月曜日"
+				
 			case 2:
 				System.out.println("火曜日");
-				break;
+				break;//2 → "火曜日"
+				
 			case 3:
 				System.out.println("水曜日");
-				break;
+				break;//3 → "水曜日"
+				
 			case 4:
 				System.out.println("木曜日");
-				break;
+				break;//4 → "木曜日"
+				
 			case 5:
 				System.out.println("金曜日");
-				break;
+				break;//5 → "金曜日"
+				
 			case 6:
 				System.out.println("土曜日");
-				break;
+				break;//6 → "土曜日"
+				
 			case 7:
 				System.out.println("日曜日");
-				break;
+				break;//7 → "日曜日"
+				
 			default:
-				System.out.println("無効な入力です");
-						}
+				System.out.println("無効な入力です");//それ以外の値なら "無効な入力です" と表示
+				}
 			
-			int month = 2 ;
-			switch(month) {
+			int month = 2 ;//int 型の変数 month を用意
+			switch(month) {//month の値に応じて季節を表示
 				case 1,2,12:
 					System.out.println("冬");
-				break;
+				break;//12, 1, 2 → "冬"
 				
 				case 3,4,5:
 					System.out.println("春");
-				break;
+				break;//3, 4, 5 → "春"
 				
 				case 6,7,8:
 					System.out.println("夏");
-				break;
+				break;//6, 7, 8 → "夏"
 				
 				case 9,10,11:
 					System.out.println("秋");
-				break;
+				break;//9, 10, 11 → "秋"
+				
 				default:
-					System.out.println("無効な月です");
+					System.out.println("無効な月です");//それ以外の値なら "無効な月です" と表示
 			}
 	}
 }
