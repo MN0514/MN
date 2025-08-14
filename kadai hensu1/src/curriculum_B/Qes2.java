@@ -92,8 +92,53 @@ public class Qes2 {
 				System.out.println("入力は無効です");
 			}//入力が null または空文字（""）のときに「入力が無効です」と表示する
 			//課題7.11 if型反復処理 Qes8
+			
+			int day = 1 ; //int 型の変数 day を用意
+			switch(day) {
+			case 1:
+				System.out.println("月曜日");
+				break;
+			case 2:
+				System.out.println("火曜日");
+				break;
+			case 3:
+				System.out.println("水曜日");
+				break;
+			case 4:
+				System.out.println("木曜日");
+				break;
+			case 5:
+				System.out.println("金曜日");
+				break;
+			case 6:
+				System.out.println("土曜日");
+				break;
+			case 7:
+				System.out.println("日曜日");
+				break;
+			default:
+				System.out.println("無効な入力です");
+						}
+			
+			int month = 2 ;
+			switch(month) {
+				case 1,2,12:
+					System.out.println("冬");
+				break;
+				
+				case 3,4,5:
+					System.out.println("春");
+				break;
+				
+				case 6,7,8:
+					System.out.println("夏");
+				break;
+				
+				case 9,10,11:
+					System.out.println("秋");
+				break;
+				default:
+					System.out.println("無効な月です");
+			}
 	}
-	
-		
 }
-
