@@ -70,77 +70,75 @@ public class Qes3 {
         System.out.println(countdd);//countdd変数を表示
         
         //Q3 9
-        
+       
+        Scanner scanner = new Scanner(System.in); // 入力用のScannerを毎回生成
         while (true) {
-        	Scanner scanner = new Scanner(System.in);
-        	System.out.print("数字を入力してください: ");
-        	int name = scanner.nextInt();//整数の入力
-        	if (name == 0) {//終了条件の定義
-        	System.out.println("終了しました");
-        	//scanner.close();//scannerを閉じる
-        	break;//ループを閉じる
-        	}
-        }//Q3 10
+            
+            System.out.print("数字を入力してください: ");
+            int num = scanner.nextInt(); // 整数を入力
+            
+            if (num == 0) { // 入力が 0 なら終了
+                System.out.println("終了しました");
+                break; // ループを抜け
+            }
+        }
+        scanner.nextLine();
+        //Q3 10
         
-        for (int aa = 01; aa<=9 ; aa++) {
-        	for (int ab = 01; ab<=9 ; ab++) {
+        for (int aa = 1; aa<=9 ; aa++) {
+        	for (int ab = 1; ab<=9 ; ab++) {
         		int ac = aa*ab;//計算結果
-        		if(ab<=8 && ac < 10) {
-        		System.out.print("|0"+ aa + "*0" + ab +"=" + "0" + ac + "|");
-        		}//計算結果が一桁のとき02のように0を出力するようにする
-        		else if(ab<=8 && ac >= 10) {
-            		System.out.print("|0"+ aa + "*0" + ab +"=" + ac + "|");
+        		if(ab<=8) {
+            		System.out.print("|"+String.format("%02d", aa) + "*" + String.format("%02d", ab) +"=" + String.format("%02d", ac) + "|");
             		}
-        		else if(ab == 9 && ac<= 10) {
-            		System.out.println("|0"+ aa + "*0" + ab +"=" + "0" + ac + "|");
-            		}//ab=9のとき改行かつ計算結果が一桁のとき02のように0を出力するようにする
         		else {
-        			System.out.println("|0"+ aa + "*0" + ab +"=" + ac + "|");//9を計算したら改行する
-        		}////ab=9のとき改行
+        			System.out.println("|"+String.format("%02d", aa) + "*" + String.format("%02d", ab) +"=" + String.format("%02d", ac) + "|");//9を計算したら改行する
+        		}//ab=9のとき改行
         		
         	}
         }//Q3 11
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
-        System.out.print("在庫を知りたい家電: ");
-        String goods = scanner.nextLine();//在庫数を知りたい家電を入力
-
-        int zaikopc = random.nextInt(12);//在庫数を0～11でランダム生成
-        int zaikorei = random.nextInt(12);//在庫数を0～11でランダム生成
-        int zaikosenpu = random.nextInt(12);//在庫数を0～11でランダム生成
-        int zaikosenta = random.nextInt(12);//在庫数を0～11でランダム生成
-        int zaikokasi = random.nextInt(12);//在庫数を0～11でランダム生成
-        int zaikotv = random.nextInt(12);//在庫数を0～11でランダム生成
-        int zaikodis = 11-zaikotv;//ディスプレイとテレビの合計在庫数を11にする
-        switch(goods) {
-        case "パソコン":
-        	System.out.println(goods + "の残り台数は"+ zaikopc +"台です");
-        	break;
-        case "冷蔵庫":
-        	System.out.println(goods + "の残り台数は"+ zaikorei +"台です");
-        	break;
-        case "扇風機":
+        System.out.print("在庫を知りたい商品を入力してください（「、」区切り）: ");
+        String input = scanner.nextLine();
+        String[] items = input.split("、");
+        Random rand = new Random();
+        int tvCount = rand.nextInt(12); // 0〜11のランダム値
+        int displayCount = 11 - tvCount;
+        for (String item : items) {
         	
-        	System.out.println(goods + "の残り台数は"+ zaikosenpu +"台です");
-        	break;
-        case "洗濯機":
-        	
-        	System.out.println(goods + "の残り台数は"+ zaikosenta +"台です");
-        	break;
-        case "加湿器":        	
-        	System.out.println(goods + "の残り台数は"+ zaikokasi +"台です");
-        	break;
-        case "テレビ":
-        	System.out.println(goods + "の残り台数は"+ zaikotv +"台です");
-        	break;
-        case "ディスプレイ":        	
-        	System.out.println(goods + "の残り台数は"+ zaikodis +"台です");
-        	break;
-       	default:
-       		System.out.println("『"+ goods + " 』は指定の商品ではありません");
-       		break;
+            switch (item) {
+               
+                case "パソコン":
+                    System.out.println("パソコンの残り台数は" + rand.nextInt(12) + "台です");
+                    break;
+                case "冷蔵庫":
+                    System.out.println("冷蔵庫の残り台数は" + rand.nextInt(12) + "台です");
+                    break;
+                case "扇風機":
+                    System.out.println("扇風機の残り台数は" + rand.nextInt(12) + "台です");
+                    break;
+                case "洗濯機":
+                    System.out.println("洗濯機の残り台数は" + rand.nextInt(12) + "台です");
+                    break;
+                case "加湿器":
+                    System.out.println("加湿器の残り台数は" + rand.nextInt(12) + "台です");
+                    break;
+                case "テレビ":
+                case "ディスプレイ":
+                    // 条件演算子を使って出力内容を変える
+                    String output = item.equals("テレビ")
+                    	? "テレビの残り台数は" + tvCount + "台です"
+                        : "ディスプレイの残り台数は" + displayCount + "台です";
+                    System.out.println(output);
+                    break;
+                default:
+                    System.out.println(item + "は対象外の商品です");
+                    
+            }
+            
         }
-        
-        
+        scanner.close();//scannerを閉じる
+        }        
 	}
-}
+
+
+
