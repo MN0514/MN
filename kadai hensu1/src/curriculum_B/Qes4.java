@@ -109,12 +109,13 @@ public class Qes4 {
         //Qes4 8
         
         int[][] array3 = {{12, 15, 8}, {6, 19, 25}, {30, 2, 10}}; 
-        
-        int max1 = 0 ;
-		int min1 = 10000000 ;
+        int max1= array3[0][0];
+		int min1= array3[0][0];
+       
 		for(int n = 0 ; n < array3.length  ; n++){ //.lengthで配列の長さ分だけ繰り返す
-			for(int o = 0 ; o < array3.length  ; o++) {
-			
+			 
+			for(int o = 0 ; o < array3[n].length  ; o++) {
+				
 				if(max1 <= array3[n][o]){
 					max1 = array3[n][o];
 				}//最大とを求める
@@ -123,9 +124,10 @@ public class Qes4 {
 			}//最小値を求める
 			
 			}
+			
+			
 		}
-		System.out.println("配列の 最大値は"+max1+"最小値は"+min1 );
-		
+		System.out.println("配列の最大値は"+max1+"最小値は"+min1 );
         
         
 		//Qes4 9
@@ -137,7 +139,7 @@ public class Qes4 {
         int[][][] array4 = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}; 
         for(int p = 0 ; p < array4.length ; p++){ //.lengthで配列の長さ分だけ繰り返す
         	for(int q = 0 ; q < array4[p].length ; q++){//.lengthで配列の長さ分だけ繰り返す
-        		for(int r = 0 ; r < array4[q].length ; r++){//.lengthで配列の長さ分だけ繰り返す
+        		for(int r = 0 ; r < array4[p][q].length ; r++){//.lengthで配列の長さ分だけ繰り返す
         			System.out.print(array4[p][q][r] + " ");
         		}
         		System.out.println();//改行
