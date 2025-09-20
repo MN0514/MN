@@ -30,8 +30,8 @@ public class Qes4 {
 		//Qe4 3
 		
 		int[] scores4 = {12,7,9,21,5,18}; 
-		int max = 0 ;
-		int min = 10000000 ;
+		int max = scores4[0] ;
+		int min = scores4[0] ;
 		for(int d = 0 ; d < scores4.length  ; d++){ //.lengthで配列の長さ分だけ繰り返す
 			
 			
@@ -76,7 +76,7 @@ public class Qes4 {
             System.out.println(input + " は配列に含まれていません。");
         }//判定結果を表示
 
-        scanner.close();
+       
         
         
 		//Qe4 6
@@ -151,7 +151,7 @@ public class Qes4 {
         
         
         
-       
+        scanner.close();
 	}
 	}
 	
